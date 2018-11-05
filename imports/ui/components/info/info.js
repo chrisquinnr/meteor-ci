@@ -1,3 +1,4 @@
+import { Template } from 'meteor/templating';
 import { Links } from '/imports/api/links/links.js';
 import { Meteor } from 'meteor/meteor';
 import './info.html';
@@ -16,9 +17,9 @@ Template.info.events({
   'submit .info-link-add'(event) {
     event.preventDefault();
 
-    const target = event.target;
-    const title = target.title;
-    const url = target.url;
+    const { target } = event.target;
+    const { title } = target.title;
+    const { url } = target.url;
 
     Meteor.call('links.insert', title.value, url.value, (error) => {
       if (error) {
@@ -28,5 +29,5 @@ Template.info.events({
         url.value = '';
       }
     });
-  },
+  }
 });
