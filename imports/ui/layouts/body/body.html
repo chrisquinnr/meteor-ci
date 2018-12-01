@@ -1,3 +1,131 @@
 <template name="App_body">
-  {{> Template.dynamic template=main}}
+  <div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+      <div class="header">
+        <h1 class="brand-title">Meteor CI Starter Kit</h1>
+        <h2 class="brand-tagline">Continous Integration with Meteor.js</h2>
+
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a class="pure-button" href="https://github.com/chrisquinnr/meteor-ci">Github</a>
+            </li>
+            <li class="nav-item">
+              <a class="pure-button" href="http://hello.chrisquinn.tech">About</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+      <div>
+        <!-- A wrapper for all the blog posts -->
+        <div class="posts">
+          <h1 class="content-subhead">Pinned Post</h1>
+          <!-- A single blog post -->
+          <section class="post">
+            <header class="post-header">
+              <img width="48" height="48" alt="Tilo Mitra&#x27;s avatar" class="post-avatar" src="img/common/tilo-avatar.png">
+
+              <h2 class="post-title">Quick start</h2>
+
+              <p class="post-meta">
+                By <a href="http://hello.chrisquinn.tech" class="post-author">Chris Quinn</a>
+              </p>
+            </header>
+
+            <div class="post-description">
+              <p>
+                <pre>
+                  git clone git@github.com:chrisquinnr/meteor-ci.git
+                  cd meteor-ci
+                  meteor
+
+                  // configure your CI service & deployment vector
+                  git commit -am 'your work'
+
+                  // commit blocked if linting fails or tests fail
+
+                  // if test pass & linting is good =>
+                  git push 
+
+                  // CI runner starts, deployed if build succeeds
+
+                </pre>
+              </p>
+            </div>
+          </section>
+
+        </div>
+        <div class="posts">
+          <!-- A single blog post -->
+          <section class="post">
+            <header class="post-header">
+              <img width="48" height="48" alt="Tilo Mitra&#x27;s avatar" class="post-avatar" src="img/common/tilo-avatar.png">
+
+              <h2 class="post-title">Introducing the Meteor CI Starter Kit</h2>
+
+              <p class="post-meta">
+                By <a href="http://hello.chrisquinn.tech" class="post-author">Chris Quinn</a>
+              </p>
+            </header>
+
+            <div class="post-description">
+              <p>
+                Whilst it's true the the Meteor Development Group have moved their focus to GraphQL & Apollo, the project remains active and has an avid userbase. I've been using Meteor in production environments for over four years now and I'm still a fan.
+              </p>
+              <p>
+                One of my goals has always been to reach development nirvana with Meteor's isomorphic and flexible stack underpinned by solid testing and bulletproof deployment methodologies. The Meteor CI Starter Kit is my attempt at doing exactly that.
+              </p>
+              <p>
+                With Meteor installed, simply <code>clone</code> the starter kit, run & enjoy. Naturally, to hook this into your CI runner of choice and destination production environment, you're going to have to configure a couple of things.
+              </p>
+              <p>
+
+              </p>
+            </div>
+          </section>
+          <section class="post">
+            <header class="post-header">
+              <img width="48" height="48" alt="Tilo Mitra&#x27;s avatar" class="post-avatar" src="img/common/tilo-avatar.png">
+
+              <h2 class="post-title">Introducing the Meteor CI Starter Kit</h2>
+
+              <p class="post-meta">
+                By <a href="http://hello.chrisquinn.tech" class="post-author">Chris Quinn</a>
+              </p>
+            </header>
+
+            <div class="post-description">
+              <p>
+                Whilst it's true the the Meteor Development Group have moved their focus to GraphQL & Apollo, the project remains active and has an avid userbase. I've been using Meteor in production environments for over four years now and I'm still a fan.
+              </p>
+              <p>
+                One of my goals has always been to reach development nirvana with Meteor's isomorphic and flexible stack underpinned by solid testing and bulletproof deployment methodologies. The Meteor CI Starter Kit is my attempt at doing exactly that.
+              </p>
+              <p>
+                With Meteor installed, simply <code>clone</code> the starter kit, run & enjoy. Naturally, to hook this into your CI runner of choice and destination production environment, you're going to have to configure a couple of things.
+              </p>
+              <p>
+
+              </p>
+            </div>
+          </section>
+          {{> Template.dynamic template=main}}
+        </div>
+
+        <div class="footer">
+          <div class="pure-menu pure-menu-horizontal">
+            <ul>
+              <li class="pure-menu-item"><a href="http://purecss.io/" class="pure-menu-link">About</a></li>
+              <li class="pure-menu-item"><a href="http://twitter.com/yuilibrary/" class="pure-menu-link">Twitter</a></li>
+              <li class="pure-menu-item"><a href="http://github.com/pure-css/pure/" class="pure-menu-link">GitHub</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </template>
