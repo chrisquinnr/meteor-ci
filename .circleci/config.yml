@@ -88,6 +88,8 @@ jobs:
           path: ./tests/coverage/unit-tests/
           destination: unit-tests
   deploy:
+    docker:
+      - image: buildpack-deps:trusty
     steps:
       - checkout
       - run:
