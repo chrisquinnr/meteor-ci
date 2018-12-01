@@ -10,7 +10,7 @@ Template.info.onCreated(function () {
 Template.info.helpers({
   links() {
     return Links.find({});
-  },
+  }
 });
 
 Template.info.events({
@@ -23,7 +23,7 @@ Template.info.events({
 
     Meteor.call('links.insert', title.value, url.value, (error) => {
       if (error) {
-        alert(error.error);
+        alert(error.error); // eslint-disable-line
       } else {
         title.value = '';
         url.value = '';

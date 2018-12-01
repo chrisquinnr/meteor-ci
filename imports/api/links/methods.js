@@ -12,7 +12,7 @@ Meteor.methods({
     return Links.insert({
       url,
       title,
-      createdAt: new Date(),
+      createdAt: new Date()
     });
-  },
+  }
 });

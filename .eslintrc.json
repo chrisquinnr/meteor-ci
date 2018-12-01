@@ -1,64 +1,65 @@
 {
-    "parser": "babel-eslint",
-    "parserOptions": {
-      "allowImportExportEverywhere": true
-    },
-    "env": {
-      "node": true,
-      "browser": true
-    },
-    "plugins": [
-      "meteor"
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "allowImportExportEverywhere": true
+  },
+  "env": {
+    "node": true,
+    "browser": true
+  },
+  "plugins": [
+    "meteor"
+  ],
+  "extends": [
+    "airbnb",
+    "plugin:meteor/recommended"
+  ],
+  "settings": {
+    "import/resolver": "meteor"
+  },
+  "globals": {
+    "Assets": true,
+    "Package": true,
+    "Cordova": true,
+    "Npm": true
+  },
+  "rules": {
+    "react/jsx-filename-extension": 0,
+    "import/no-absolute-path": 0,
+    "import/extensions": 0,
+    "import/no-unresolved": ["error", {
+      "ignore": ["^meteor/", "^/"]
+    }],
+    "import/no-extraneous-dependencies": 0,
+    "import/prefer-default-export": 0,
+    "no-underscore-dangle": [
+      "error",
+      {
+        "allow": [
+          "_id",
+          "_ensureIndex"
+        ]
+      }
     ],
-    "extends": [
-      "airbnb",
-      "plugin:meteor/recommended"
-    ],
-    "settings": {
-      "import/resolver": "meteor"
-    },
-    "globals": {
-      "Assets": true,
-      "Package": true,
-      "Cordova": true,
-      "Npm": true
-    },
-    "rules": {
-      "react/jsx-filename-extension": 0,
-      "import/no-absolute-path": 0,
-      "import/extensions": 0,
-      "import/no-unresolved": ["error", {
-        "ignore": ["^meteor/", "^/"]
-      }],
-      "import/no-extraneous-dependencies": 0,
-      "no-underscore-dangle": [
-        "error",
-        {
-          "allow": [
-            "_id",
-            "_ensureIndex"
-          ]
-        }
-      ],
-      "comma-dangle": ["error", "never"],
-      "curly": ["error", "multi-or-nest", "consistent"],
-      "no-param-reassign": ["error", {
-        "props": false
-      }],
-      "space-before-function-paren": ["error", {
-        "anonymous": "always",
-        "named": "never",
-        "asyncArrow": "always"
-      }],
-      "object-shorthand": ["error", "always", {
-        "avoidQuotes": false
-      }],
-      "arrow-body-style": ["error", "as-needed", {
-        "requireReturnForObjectLiteral": true
-      }],
-  
-      "func-names": 0,
-      "prefer-arrow-callback": 0,
-      "meteor/no-session": 0
-    }
+    "comma-dangle": ["error", "never"],
+    "curly": ["error", "multi-or-nest", "consistent"],
+    "no-param-reassign": ["error", {
+      "props": false
+    }],
+    "space-before-function-paren": ["error", {
+      "anonymous": "always",
+      "named": "never",
+      "asyncArrow": "always"
+    }],
+    "object-shorthand": ["error", "always", {
+      "avoidQuotes": false
+    }],
+    "arrow-body-style": ["error", "as-needed", {
+      "requireReturnForObjectLiteral": true
+    }],
+
+    "func-names": 0,
+    "prefer-arrow-callback": 0,
+    "meteor/no-session": 0
   }
+}

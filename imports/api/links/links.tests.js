@@ -11,10 +11,10 @@ if (Meteor.isServer) {
     it('insert correctly', function () {
       const linkId = Links.insert({
         title: 'meteor homepage',
-        url: 'https://www.meteor.com',
+        url: 'https://www.meteor.com'
       });
       const added = Links.find({ _id: linkId });
-      const collectionName = added._getCollectionName();
+      const collectionName = added._getCollectionName(); // eslint-disable-line
       const count = added.count();
 
       assert.equal(collectionName, 'links');
