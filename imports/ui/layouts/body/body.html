@@ -1,3 +1,106 @@
 <template name="App_body">
-  {{> Template.dynamic template=main}}
+  <div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+      <div class="header">
+        <h1 class="brand-title">Meteor CI Starter Kit</h1>
+        <h2 class="brand-tagline">Continous Integration with Meteor.js</h2>
+
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a class="pure-button" href="https://github.com/chrisquinnr/meteor-ci">Github</a>
+            </li>
+            <li class="nav-item">
+              <a class="pure-button" href="http://hello.chrisquinn.tech">About</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+      <div>
+        <!-- A wrapper for all the blog posts -->
+        <div class="posts">
+          <h1 class="content-subhead">Pinned Post</h1>
+          <!-- A single blog post -->
+          <section class="post">
+            <header class="post-header">
+
+              <h2 class="post-title">Quick start</h2>
+
+              <p class="post-meta">
+                By <a href="http://hello.chrisquinn.tech" class="post-author">Chris Quinn</a>
+              </p>
+            </header>
+
+            <div class="post-description">
+              <pre>
+  git clone git@github.com:chrisquinnr/meteor-ci.git
+  cd meteor-ci
+  meteor
+              </pre>
+              <p>This gets you a ready-to-go Meteor project ready to hook up to CircleCI and Heroku.</p>
+
+              <a href="https://medium.com/salted-bytes/continuous-integration-meteor-7acac66c9381?source=friends_link&sk=cbe1a9eb8674121ba3890ff6ce09f44d">Check out the full article on how to integrate this starter kit here.</a>
+
+              <p>Basically, once you've hooked up the project to CircleCI and Heroku, you can:</p>
+              <pre>
+  chris @ ~/Sites/_My Projects/meteor-ci * master
+  [1] → git commit -am 'bad commit'
+
+  /Users/chris/Sites/_My Projects/meteor-ci/imports/ui/layouts/body/body.js
+  1:21 error Missing semicolon semi
+
+  ✖ 1 problem (1 error, 0 warnings)
+  1 error and 0 warnings potentially fixable with the `--fix` option.
+
+  // if test pass & linting is good =>
+  git push
+
+  // CI runner starts, deployed if build succeeds
+            </pre>
+
+            </div>
+          </section>
+
+        </div>
+        <div class="posts">
+          <!-- A single blog post -->
+          <section class="post">
+            <header class="post-header">
+              <h2 class="post-title">Introducing the Meteor CI Starter Kit</h2>
+
+              <p class="post-meta">
+                By <a href="http://hello.chrisquinn.tech" class="post-author">Chris Quinn</a>
+              </p>
+            </header>
+
+            <div class="post-description">
+              <p>
+                Whilst it's true the the Meteor Development Group have moved their focus to GraphQL & Apollo, the project remains active and has an avid userbase. I've been using Meteor in production environments for over four years now and I'm still a fan.
+              </p>
+              <p>
+                One of my goals has always been to reach development nirvana with Meteor's isomorphic and flexible stack underpinned by solid testing and bulletproof deployment methodologies. The Meteor CI Starter Kit is my attempt at doing exactly that.
+              </p>
+              <p>
+                With Meteor installed, simply <code>clone</code> the starter kit, run & enjoy. Naturally, to hook this into your CI runner of choice and destination production environment, you're going to have to configure a couple of things.
+              </p>
+            </div>
+          </section>
+        </div>
+
+        <div class="footer">
+          <div class="pure-menu pure-menu-horizontal">
+            <ul>
+              <li class="pure-menu-item"><a href="http://hello.chrisquinn.tech" class="pure-menu-link">About</a></li>
+              <li class="pure-menu-item"><a href="http://twitter.com/chrisquinnr/" class="pure-menu-link">Twitter</a></li>
+              <li class="pure-menu-item"><a href="http://github.com/chrisquinnr/" class="pure-menu-link">GitHub</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </template>
